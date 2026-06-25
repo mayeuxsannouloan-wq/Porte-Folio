@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronald Guardonald | Portfolio</title>
+    <style>
+        /* Réinitialisation et variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f5f5f7;
+            --accent-color: #ff3b30;
+            --gray-color: #8e8e93;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav a {
+            color: var(--gray-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        /* Header / Hero */
+        header {
+            margin-bottom: 8rem;
+        }
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+        .subtitle {
+            color: var(--gray-color);
+            font-size: 1.5rem;
+            max-width: 600px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 8rem;
+        }
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Histoire / À propos */
+        .about-text {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 700px;
+        }
+
+        /* Projets (Grille minimaliste) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+        .project-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .project-image {
+            background: #1c1c1e;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--gray-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .project-card:hover .project-image {
+            transform: scale(0.98);
+            background: #2c2c2e;
+        }
+        .project-title {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .project-tech {
+            color: var(--gray-color);
+            font-size: 0.85rem;
+        }
+
+        /* Footer / Contact */
+        footer {
+            margin-top: 10rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-color);
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            nav { margin-bottom: 4rem; }
+            header { margin-bottom: 4rem; }
+            section { margin-bottom: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav>
+            <div class="logo">R.G</div>
+            <ul>
+                <li><a href="#about">Histoire</a></li>
+                <li><a href="#work">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Ronald Guardonald. <br>Je crée des interfaces qui respirent.</h1>
+            <p class="subtitle">Designer d'interaction & Développeur Front-End indépendant. Basé quelque part entre le minimalisme et le code pur.</p>
+        </header>
+
+        <section id="about">
+            <h2>Mon Histoire</h2>
+            <div class="about-text">
+                <p>Convaincu que le superflu nuit à l'expérience, je passe mon temps à épurer le web. Après quelques années à étudier l'impact du design visuel, j'ai décidé de ne plus choisir entre l'esthétique et la technique. Je ne construis pas juste des sites, je sculpte des espaces numériques fluides.</p>
+                <br>
+                <p>Quand je ne suis pas en train de peaufiner une animation CSS au pixel près, on me trouve souvent en train de photographier l'architecture brutaliste, de chiner des disques de musique ambiante, ou d'explorer les sentiers de randonnée pour déconnecter du code.</p>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Projets Sélectionnés</h2>
+            <div class="projects-grid">
+                
+                <a href="#" class="project-card">
+                    <div class="project-image">[ Aperçu Projet 01 ]</div>
+                    <div class="project-title">E-Commerce Épuré - Nova</div>
+                    <div class="project-tech">UI/UX Design / Next.js</div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-image">[ Aperçu Projet 02 ]</div>
+                    <div class="project-title">Application Mobile - Memento</div>
+                    <div class="project-tech">Interaction / React Native</div>
+                </a>
+
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div>© 2026 Ronald Guardonald. Tous droits réservés.</div>
+            <div>Envie de collaborer ? <a href="mailto:ronald@guardonald.com">ronald@guardonald.com</a></div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
